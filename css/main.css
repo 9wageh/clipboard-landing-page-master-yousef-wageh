@@ -1,0 +1,367 @@
+/* Start Variables */
+:root {
+    --color-one: hsl(171, 66%, 44%);
+    --color-two: hsl(233, 100%, 69%);
+    --color-three: hsl(210, 10%, 33%);
+    --color-four: hsl(201, 11%, 66%);
+}
+
+/* End Variables */
+/* Start Global Rules */
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 18px;
+    /* Now 1rem = 18px */
+}
+
+body {
+    font-family: "Bai Jamjuree", sans-serif;
+}
+
+/* End Global Rules */
+/* Code Start */
+/* Start Home */
+header {
+    background-image: url(../images/bg-header-mobile.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+header .container {
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 5rem 1.5rem;
+}
+
+header .container .logo,
+#keep .container .image {
+    text-align: center;
+}
+
+header .container .logo img {
+    width: 5rem;
+}
+
+header .container .text h1 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-align: center;
+    color: var(--color-three);
+}
+
+header .container .text p,
+#keep .container .title p,
+#access .container .title p,
+#last .container .title p,
+#keep .container .text p,
+#access .container .text p {
+    font-size: .75rem;
+    font-weight: 400;
+    line-height: 1.6;
+    text-align: center;
+    color: var(--color-four);
+}
+
+.container .buttons {
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.container .buttons a {
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
+    font-weight: 600;
+    width: 15rem;
+    padding: .75rem 0;
+    text-align: center;
+    border-radius: 2rem;
+
+}
+
+.container .buttons .btn-1 {
+    background-color: var(--color-one);
+}
+
+.container .buttons .btn-2 {
+    background-color: var(--color-two);
+}
+
+/* End Home */
+/* Start Keep */
+#keep .container,
+#access .container,
+#logos .container,
+#last .container {
+    padding: 5rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+#keep .container .title h2,
+#access .container .title h2,
+#last .container .title h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-align: center;
+    color: var(--color-three);
+    margin-bottom: 1.2rem;
+}
+
+#keep .container .image img,
+#access .container .image img {
+    width: 13rem;
+}
+
+#keep .container .text h3,
+#access .container .text h3 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    text-align: center;
+    color: var(--color-three);
+    margin-bottom: 1.2rem;
+}
+
+#access .container .text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#access .container .text i {
+    font-size: 1.5rem;
+    color: var(--color-four);
+    margin: 1rem 0;
+}
+
+/* End Keep & Access*/
+/* Start Logos */
+#logos .container {
+    gap: 3rem;
+}
+
+#logos .container img {
+    width: 7rem;
+}
+
+/* End Logos */
+/* Start Footer */
+footer {
+    background-color: #eee;
+}
+
+footer .container {
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    flex-direction: column;
+    padding: 3rem 1.5rem;
+    gap: 2rem;
+}
+
+footer .logo img {
+    width: 3rem;
+}
+
+footer .first ul {
+    list-style: none;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+footer .first ul a {
+    text-decoration: none;
+    color: var(--color-three);
+    font-weight: 400;
+}
+
+footer .social ul {
+    list-style: none;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 2rem;
+}
+
+footer .social ul a {
+    text-decoration: none;
+    color: var(--color-three);
+    font-size: 1.2rem;
+}
+
+/* ENd Footer */
+/* Code End */
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1140px;
+        margin: auto;
+
+    }
+
+    header {
+        background-image: url(../images/bg-header-desktop.png);
+    }
+
+    header .container .logo img {
+        width: 8rem;
+    }
+
+    header .container .text h1 {
+        font-size: 2.5rem;
+    }
+
+    header .container .text p,
+    #keep .container .title p,
+    #access .container .title p,
+    #last .container .title p,
+    #keep .container .text p,
+    #access .container .text p {
+        font-size: 1rem;
+    }
+
+    .container .buttons {
+        flex-direction: row;
+    }
+
+    #keep .container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+        gap: 2rem;
+    }
+
+    #keep .container .title {
+        grid-column: 1/3;
+    }
+
+    #keep .container .image {
+        display: flex;
+        justify-content: center;
+        grid-row: 2/5;
+
+    }
+
+    #keep .container .image img {
+        width: 100%;
+        margin-right: 10rem;
+    }
+
+    #keep .container .text h3,
+    #keep .container .text p {
+        text-align: left;
+    }
+
+    #keep .container .title h2,
+    #access .container .title h2,
+    #last .container .title h2 {
+        font-size: 2.1rem;
+    }
+
+
+    #access .container .image img {
+        width: 100%;
+        margin-top: 5rem;
+    }
+
+    #access .container {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        align-content: center;
+        gap: 2rem;
+    }
+
+    #access .container .title,
+    #access .container .image,
+    #access .container .text-1 {
+        grid-column: 1/4;
+    }
+
+    #access .container .text-2 {
+        grid-column: 1/2;
+
+    }
+
+    #access .container .text-3 {
+        grid-column: 2/3;
+
+    }
+
+    #access .container .text-4 {
+        grid-column: 3/4;
+
+    }
+
+    #access .container .text-1 h3 {
+        font-size: 2rem;
+    }
+
+    #logos .container {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+    }
+
+
+    footer .container {
+        width: 100%;
+        flex-direction: row;
+        gap: 0;
+        height: 5rem;
+        margin: 0;
+    }
+
+    footer .logo img {
+        margin-right: 5rem;
+    }
+
+    footer .first ul {
+        list-style: none;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        justify-content: center;
+        gap: 1.2rem;
+        margin-left: 5rem;
+
+    }
+
+    footer .first ul li {
+        text-align: start;
+        margin-right: 5rem;
+    }
+
+    footer .logo img {
+        margin-left: 7rem;
+
+    }
+
+    footer .social ul {
+        position: absolute;
+        right: 0;
+        margin-right: 7rem;
+    }
+}
